@@ -1,0 +1,25 @@
+
+spring:
+  datasource:
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    #Configuraci?n AWS
+    username: X1X2
+    password: contra123
+    url: jdbc:sqlserver://localhost; databaseName=ingsoftware ; integratedSecurity=false ; trustServerCertificate=false ; encrypt=false
+
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.SQLServerDialect
+        format_sql: false
+
+app:
+  jwt:
+    access_token_validity_in_minutes: 1000
+    refresh_token_validity_in_minutes: 10
+    secret_token: qXcirydPuFLlRp5IMNZybT93n8EjWpGsSncmFjWl2kPsVC7nPjUJgOsJ0wlqHAz5SW78G0rbe71Ip37pOZeWsfYAMMmCtaSFDi2SH3WI9pMgqjyjT2qNcNoT3LeLy3lV6EjPMopda4vFbQp5VT2tEUJgSqddms7G2DZ0VpJtklgVwJM8qqjBbSSC6Af721Dh43cEOqxB3g4ftvsp0FipIw5UZ9iatGduI2lBipRV3E1AdP2u29T66huNomLiqUBJZkk7VLPNiyvxAhMZEZIpiNuLFLDsnF4koUOR7YJEki2xZ1Fcac4xkKLiibOH5tSHB7s9vtXBAGAzFf7t1SX2vIzIVfg9FlqmNZ7sCooH4ExYRQtjLGUifpyfVE3PYOadFuCZpv1848qJ3EOLazeSRlElu0HOX0c3HgYp3fdijtwLY7W8BWxC74RmEXD65rlDVnZb0jfDPbZgLuUcCRKVEG3pQC1k77KK4KmcATijkO9LidbzHrDKP2BjW92QUnlO
+    issuedBy: http://localhost:8080
